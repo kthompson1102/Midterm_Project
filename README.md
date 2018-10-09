@@ -37,8 +37,10 @@ int main() {
  getline(cin,more_info);
  while (more_info != "no"){
   if (more_info = "out of state tuition"){
-  
+  outOfState();
   }
+  if (more_info = "projected salary") {
+  
  }
 }
 
@@ -68,13 +70,13 @@ void createSchools(){
 
 void outOfState(){
 for(int i = 0; i < 10; i++){
-   cout << setw(0) << list[i].name << "\t\t\t" << list[i].ostate_tuition << setw(20) << endl;
+   cout << setw(0) << list[i].name << "\t\t\t $" << list[i].ostate_tuition << setw(20) << endl;
    }  
 }
 
 void projSalary(){
 for(int i = 0; i < 10; i++){
-   cout << setw(0) << list[i].name << "\t\t\t" << list[i].proj_salary << setw(20) << endl;
+   cout << setw(0) << list[i].name << "\t\t\t $" << list[i].proj_salary << setw(20) << endl;
    }  
 }
 
@@ -86,6 +88,12 @@ for(int i = 0; i < 10; i++){
 
 void testScores(){
 for(int i = 0; i < 10; i++){
-   cout << setw(0) << list[i].name << "\t\t\t" << list[i].ssat<< setw(20) << endl;
+   cout << setw(0) << list[i].name << "\t\t\t SAT:" << list[i].ssat<< "-" << list[i].esat << "  ACT:" << list[i].sact << "-" << list[i].eact << setw(20) << endl;
+   }  
+}
+
+void acceptRate(){
+for(int i = 0; i < 10; i++){
+   cout << setw(0) << list[i].name << "\t\t\t" << list[i].acceptance << "%" << setw(20) << endl;
    }  
 }

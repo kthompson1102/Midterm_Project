@@ -32,16 +32,36 @@ int main() {
  for(int i = 0; i < MAX; i++){
   cout << setw(0) << list[i].name << "\t\t\t" << list[i].istate_tuition << setw(20) << list[i].campusLife << endl;
  }
+ cout << endl;
  string more_info;
  cout << "Would you like any other information on the schools?"<< endl;
  getline(cin,more_info);
  while (more_info != "no"){
-  if (more_info = "out of state tuition"){
+   cout << endl;
+  if (more_info == "out of state tuition"){
   outOfState();
   }
-  if (more_info = "projected salary") {
-  
+  if (more_info == "projected salary") {
+  projSalary();
  }
+  if (more_info == "recommended years") {
+  recomYears();
+ }
+  if (more_info == "test scores" ){
+  testScores(); 
+ }
+  if (more_info == "acceptance rate"){
+  acceptRate();
+ }
+ cout << endl;
+ cout << "Anything else?"<< endl;
+ getline(cin,more_info);
+}
+string school_choice;
+cout << "What HBCU do you think best fits you?" << endl;
+getline(cin,school_choice);
+cout << "Well good luck applying to " << school_choice << "!" << endl;
+
 }
 
 void createSchools(){
@@ -97,3 +117,4 @@ for(int i = 0; i < 10; i++){
    cout << setw(0) << list[i].name << "\t\t\t" << list[i].acceptance << "%" << setw(20) << endl;
    }  
 }
+

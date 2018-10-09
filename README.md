@@ -5,6 +5,12 @@
 using namespace std;
 
 void createSchools();
+void outOfState();
+void projSalary();
+void recomYears();
+void testScores();
+void acceptRate();
+
 
 struct College{
  string name;
@@ -25,6 +31,14 @@ int main() {
  cout << "Name:\t\t\t Instate Tuition:\t Campus Life:\t" << endl;
  for(int i = 0; i < MAX; i++){
   cout << setw(0) << list[i].name << "\t\t\t" << list[i].istate_tuition << setw(20) << list[i].campusLife << endl;
+ }
+ string more_info;
+ cout << "Would you like any other information on the schools?"<< endl;
+ getline(cin,more_info);
+ while (more_info != "no"){
+  if (more_info = "out of state tuition"){
+  
+  }
  }
 }
 
@@ -50,4 +64,28 @@ void createSchools(){
  College NorthCarolinaAT = {"North Carolina A&T State University", "Social Sciences", "Psychology", "Biological and Biomedical Sciences", "English", "Math and Statistics", "Engineering", "Health Professions", "Business", "Visual and Performing Arts", "Protective Services, Linguistics", 6526, 19416, 33100, 4, 850, 1010, 18, 22, 54, "B"};
  list[9] = NorthCarolinaAT;
 
+}
+
+void outOfState(){
+for(int i = 0; i < 10; i++){
+   cout << setw(0) << list[i].name << "\t\t\t" << list[i].ostate_tuition << setw(20) << endl;
+   }  
+}
+
+void projSalary(){
+for(int i = 0; i < 10; i++){
+   cout << setw(0) << list[i].name << "\t\t\t" << list[i].proj_salary << setw(20) << endl;
+   }  
+}
+
+void recomYears(){
+for(int i = 0; i < 10; i++){
+   cout << setw(0) << list[i].name << "\t\t\t" << list[i].recom_years << setw(20) << endl;
+   }  
+}
+
+void testScores(){
+for(int i = 0; i < 10; i++){
+   cout << setw(0) << list[i].name << "\t\t\t" << list[i].ssat<< setw(20) << endl;
+   }  
 }
